@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="JogoDaVelhaApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStopCollection>
+                <GradientStop Offset="0.3" Color="#574AE2" />
+                <GradientStop Offset="1.1" Color="#3A0CA3" />
+            </GradientStopCollection>
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Padding" Value="8" />
+            <Setter Property="FontSize" Value="50" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="BorderColor" Value="#93BEDF" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid
+        Margin="10"
+        ColumnDefinitions="*,*,*"
+        ColumnSpacing="10"
+        RowDefinitions="*,*,*,*,*,*"
+        RowSpacing="10">
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            Margin="0,0,0,80"
+            FontAttributes="Bold"
+            FontSize="40"
+            HorizontalOptions="Center"
+            Text="Jogo da Velha"
+            TextColor="White"
+            TextTransform="Uppercase"
+            VerticalOptions="Center" />
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="3"
+            FontSize="30"
+            HorizontalOptions="Center"
+            Text="Sua Vez"
+            TextColor="White"
+            VerticalOptions="End" />
+
+        <Label
+            x:Name="lblRodadaAtual"
+            Grid.Row="1"
+            Grid.ColumnSpan="3"
+            FontSize="50"
+            HorizontalOptions="Center"
+            Text="X"
+            TextColor="White"
+            VerticalOptions="Start" />
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="X:"
+            TextColor="White"
+            VerticalOptions="End" />
+
+        <Label
+            x:Name="lblPlayer1"
+            Grid.Row="2"
+            Grid.Column="0"
+            FontSize="Medium"
+            HorizontalOptions="End"
+            Text="0"
+            TextColor="White"
+            VerticalOptions="End" />
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="1"
+            FontAttributes="Bold"
+            FontSize="Medium"
+            Text="O:"
+            TextColor="White"
+            VerticalOptions="End" />
+        <Label
+            x:Name="lblPlayer2"
+            Grid.Row="2"
+            Grid.Column="1"
+            FontSize="Medium"
+            HorizontalOptions="End"
+            Text="0"
+            TextColor="White"
+            VerticalOptions="End" />
+
+        <Button
+            x:Name="btn10"
+            Grid.Row="3"
+            Grid.Column="0"
+            Clicked="Button_Clicked" />
+        <Button
+            x:Name="btn11"
+            Grid.Row="3"
+            Grid.Column="1"
+            Clicked="Button_Clicked" />
+        <Button
+            x:Name="btn12"
+            Grid.Row="3"
+            Grid.Column="2"
+            Clicked="Button_Clicked" />
+
+        <Button
+            x:Name="btn20"
+            Grid.Row="4"
+            Grid.Column="0"
+            Clicked="Button_Clicked" />
+        <Button
+            x:Name="btn21"
+            Grid.Row="4"
+            Grid.Column="1"
+            Clicked="Button_Clicked" />
+        <Button
+            x:Name="btn22"
+            Grid.Row="4"
+            Grid.Column="2"
+            Clicked="Button_Clicked" />
+
+        <Button
+            x:Name="btn30"
+            Grid.Row="5"
+            Grid.Column="0"
+            Clicked="Button_Clicked" />
+        <Button
+            x:Name="btn31"
+            Grid.Row="5"
+            Grid.Column="1"
+            Clicked="Button_Clicked" />
+        <Button
+            x:Name="btn32"
+            Grid.Row="5"
+            Grid.Column="2"
+            Clicked="Button_Clicked" />
+    </Grid>
+</ContentPage>
