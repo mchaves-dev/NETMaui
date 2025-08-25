@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JogoDaVelhaApp", "JogoDaVelhaApp\JogoDaVelhaApp.csproj", "{FCE2583F-C688-D5E3-2CF2-E1F10CAFD180}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraApp", "CalculadoraApp\CalculadoraApp.csproj", "{55BDB12F-70FB-419E-B211-042F12E8B3E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,8 +18,15 @@ Global
 		{FCE2583F-C688-D5E3-2CF2-E1F10CAFD180}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{FCE2583F-C688-D5E3-2CF2-E1F10CAFD180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCE2583F-C688-D5E3-2CF2-E1F10CAFD180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55BDB12F-70FB-419E-B211-042F12E8B3E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55BDB12F-70FB-419E-B211-042F12E8B3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55BDB12F-70FB-419E-B211-042F12E8B3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55BDB12F-70FB-419E-B211-042F12E8B3E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {627E9E5B-F293-448F-953E-745BB6A71561}
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="CalculadoraApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Padding" Value="8" />
+            <Setter Property="FontSize" Value="28" />
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid
+        Margin="0"
+        Padding="20,80,20,20"
+        ColumnDefinitions="*,*,*,*"
+        ColumnSpacing="10"
+        RowDefinitions="*,*,*,*,*,*,*,*,*"
+        RowSpacing="10">
+
+        <Entry
+            x:Name="Resultado"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            FontSize="36"
+            HorizontalTextAlignment="End"
+            IsReadOnly="True"
+            VerticalTextAlignment="Center" />
+
+        <!--  SEPARADOR  -->
+
+        <ImageButton
+            x:Name="btnExcluir"
+            Grid.Row="2"
+            Grid.Column="4"
+            Source="delete" />
+
+        <!--  SEPARADOR  -->
+
+        <Border
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.ColumnSpan="4"
+            HeightRequest="1" />
+
+        <!--  SEPARADOR  -->
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="0"
+            BackgroundColor="#ECFAF4"
+            Text="C"
+            TextColor="Red" />
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="1"
+            BackgroundColor="#ECFAF4"
+            Text="( )"
+            TextColor="Green" />
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="2"
+            BackgroundColor="#ECFAF4"
+            Text="%"
+            TextColor="Green" />
+
+        <Button
+            Grid.Row="4"
+            Grid.Column="4"
+            BackgroundColor="#ECFAF4"
+            Text="/"
+            TextColor="Green" />
+
+        <!--  SEPARADOR  -->
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="0"
+            Text="7" />
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="1"
+            Text="8" />
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="2"
+            Text="9" />
+
+        <Button
+            Grid.Row="5"
+            Grid.Column="3"
+            BackgroundColor="#ECFAF4"
+            Text="x"
+            TextColor="Green" />
+
+        <!--  SEPARADOR  -->
+
+        <Button
+            Grid.Row="6"
+            Grid.Column="0"
+            Text="4" />
+
+        <Button
+            Grid.Row="6"
+            Grid.Column="1"
+            Text="5" />
+
+        <Button
+            Grid.Row="6"
+            Grid.Column="2"
+            Text="6" />
+
+        <Button
+            Grid.Row="6"
+            Grid.Column="3"
+            BackgroundColor="#ECFAF4"
+            Text="-"
+            TextColor="Green" />
+
+        <!--  SEPARADOR  -->
+
+        <Button
+            Grid.Row="7"
+            Grid.Column="0"
+            Text="1" />
+
+        <Button
+            Grid.Row="7"
+            Grid.Column="1"
+            Text="2" />
+
+        <Button
+            Grid.Row="7"
+            Grid.Column="2"
+            Text="3" />
+
+        <Button
+            Grid.Row="7"
+            Grid.Column="3"
+            BackgroundColor="#ECFAF4"
+            Text="+"
+            TextColor="Green" />
+
+        <!--  SEPARADOR  -->
+
+        <Button
+            Grid.Row="8"
+            Grid.Column="0"
+            Text="0" />
+
+        <Button
+            Grid.Row="8"
+            Grid.Column="1"
+            Text="," />
+
+        <Button
+            Grid.Row="8"
+            Grid.Column="2"
+            Grid.ColumnSpan="2"
+            BackgroundColor="Green"
+            Text="=" />
+    </Grid>
+</ContentPage>
