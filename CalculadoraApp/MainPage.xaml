@@ -21,13 +21,14 @@
         RowSpacing="10">
 
         <Entry
-            x:Name="Resultado"
+            x:Name="txtCalculo"
             Grid.Row="0"
             Grid.Column="0"
             Grid.ColumnSpan="4"
-            FontSize="36"
+            FontSize="29"
             HorizontalTextAlignment="End"
             IsReadOnly="True"
+            TextColor="White"
             VerticalTextAlignment="Center" />
 
         <!--  SEPARADOR  -->
@@ -36,7 +37,10 @@
             x:Name="btnExcluir"
             Grid.Row="2"
             Grid.Column="4"
-            Source="delete" />
+            BackgroundColor="Transparent"
+            Clicked="btnExcluir_Clicked"
+            HorizontalOptions="End"
+            Source="delete.png" />
 
         <!--  SEPARADOR  -->
 
@@ -52,6 +56,7 @@
             Grid.Row="4"
             Grid.Column="0"
             BackgroundColor="#ECFAF4"
+            Clicked="Button_Clicked"
             Text="C"
             TextColor="Red" />
 
@@ -59,6 +64,7 @@
             Grid.Row="4"
             Grid.Column="1"
             BackgroundColor="#ECFAF4"
+            Clicked="Button_Clicked"
             Text="( )"
             TextColor="Green" />
 
@@ -66,6 +72,7 @@
             Grid.Row="4"
             Grid.Column="2"
             BackgroundColor="#ECFAF4"
+            Clicked="Button_Clicked"
             Text="%"
             TextColor="Green" />
 
@@ -73,6 +80,7 @@
             Grid.Row="4"
             Grid.Column="4"
             BackgroundColor="#ECFAF4"
+            Clicked="Button_Clicked"
             Text="/"
             TextColor="Green" />
 
@@ -81,23 +89,27 @@
         <Button
             Grid.Row="5"
             Grid.Column="0"
+            Clicked="Button_Clicked"
             Text="7" />
 
         <Button
             Grid.Row="5"
             Grid.Column="1"
+            Clicked="Button_Clicked"
             Text="8" />
 
         <Button
             Grid.Row="5"
             Grid.Column="2"
+            Clicked="Button_Clicked"
             Text="9" />
 
         <Button
             Grid.Row="5"
             Grid.Column="3"
             BackgroundColor="#ECFAF4"
-            Text="x"
+            Clicked="Button_Clicked"
+            Text="*"
             TextColor="Green" />
 
         <!--  SEPARADOR  -->
@@ -105,22 +117,26 @@
         <Button
             Grid.Row="6"
             Grid.Column="0"
+            Clicked="Button_Clicked"
             Text="4" />
 
         <Button
             Grid.Row="6"
             Grid.Column="1"
+            Clicked="Button_Clicked"
             Text="5" />
 
         <Button
             Grid.Row="6"
             Grid.Column="2"
+            Clicked="Button_Clicked"
             Text="6" />
 
         <Button
             Grid.Row="6"
             Grid.Column="3"
             BackgroundColor="#ECFAF4"
+            Clicked="Button_Clicked"
             Text="-"
             TextColor="Green" />
 
@@ -129,22 +145,26 @@
         <Button
             Grid.Row="7"
             Grid.Column="0"
+            Clicked="Button_Clicked"
             Text="1" />
 
         <Button
             Grid.Row="7"
             Grid.Column="1"
+            Clicked="Button_Clicked"
             Text="2" />
 
         <Button
             Grid.Row="7"
             Grid.Column="2"
+            Clicked="Button_Clicked"
             Text="3" />
 
         <Button
             Grid.Row="7"
             Grid.Column="3"
             BackgroundColor="#ECFAF4"
+            Clicked="Button_Clicked"
             Text="+"
             TextColor="Green" />
 
@@ -153,11 +173,13 @@
         <Button
             Grid.Row="8"
             Grid.Column="0"
+            Clicked="Button_Clicked"
             Text="0" />
 
         <Button
             Grid.Row="8"
             Grid.Column="1"
+            Clicked="Button_Clicked"
             Text="," />
 
         <Button
@@ -165,6 +187,7 @@
             Grid.Column="2"
             Grid.ColumnSpan="2"
             BackgroundColor="Green"
+            Clicked="Button_Clicked"
             Text="=" />
     </Grid>
 </ContentPage>
