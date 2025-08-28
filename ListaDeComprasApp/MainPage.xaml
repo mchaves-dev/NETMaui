@@ -17,7 +17,27 @@
                 Style="{StaticResource HeadlinePrimary}"
                 Text="Lista de compras" />
             <VerticalStackLayout>
-                <Frame />
+                <!--<ListView x:Name="lvlProdutos">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding NomeProduto}" />
+                            <TextCell Text="{Binding Quantidade}" />
+                            <TextCell Text="{Binding Observacao}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+
+                <CollectionView x:Name="clvProdutos">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border>
+                                <Label Text="{Binding NomeProduto}" />
+                                <Label Text="{Binding Quantidade}" />
+                                <Label Text="{Binding Observacao}" />
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
             </VerticalStackLayout>
             <Button
                 x:Name="btnAdicionarProduto"

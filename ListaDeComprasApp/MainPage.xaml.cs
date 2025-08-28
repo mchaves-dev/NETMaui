@@ -1,17 +1,20 @@
-﻿using System.Threading.Tasks;
+﻿using ListaDeComprasApp.Models;
+using System.Collections.ObjectModel;
 
-namespace ListaDeComprasApp
+namespace ListaDeComprasApp;
+
+public partial class MainPage : ContentPage
 {
-	public partial class MainPage : ContentPage
-	{
-		public MainPage()
-		{
-			InitializeComponent();
-		}
+    public static ObservableCollection<Produto> ListaProdutosCompras = new ObservableCollection<Produto>();
 
-		private async void btnAdicionarProduto_Clicked(object sender, EventArgs e)
-		{
-			await Navigation.PushAsync(new ProdutoPage());
-		}
-	}
+    public MainPage()
+    {
+        InitializeComponent();
+        clvProdutos.ItemsSource = ListaProdutosCompras;
+    }
+
+    private async void btnAdicionarProduto_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new ProdutoPage());
+    }
 }

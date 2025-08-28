@@ -33,7 +33,6 @@
                 x:Name="btnSalvar"
                 Clicked="btnSalvar_Clicked"
                 HorizontalOptions="Fill"
-                IsVisible="False"
                 SemanticProperties.Description="Adicionar Produto"
                 Text="Salvar" />
         </VerticalStackLayout>
