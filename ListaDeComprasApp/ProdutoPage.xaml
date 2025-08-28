@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ListaDeComprasApp.ProdutoPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False">
+    <ScrollView>
+        <VerticalStackLayout Padding="20,50,20,40" Spacing="10">
+
+            <Label
+                x:Name="lblTitulo"
+                Margin="0,0,0,50"
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource HeadlinePrimary}" />
+
+            <Label FontSize="14" Text="Produto" />
+            <Entry
+                x:Name="txtNomeProduto"
+                MaxLength="50"
+                Placeholder="Digite o nome do produto" />
+            <Label FontSize="14" Text="Qtd" />
+            <Entry
+                x:Name="txtQuantidade"
+                Keyboard="Numeric"
+                Placeholder="Digite a quantidade" />
+            <Label FontSize="14" Text="Obs." />
+            <Editor
+                x:Name="txtObservacao"
+                AutoSize="TextChanges"
+                Placeholder="Adicione uma obs" />
+
+            <Button
+                x:Name="btnSalvar"
+                Clicked="btnSalvar_Clicked"
+                HorizontalOptions="Fill"
+                IsVisible="False"
+                SemanticProperties.Description="Adicionar Produto"
+                Text="Salvar" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

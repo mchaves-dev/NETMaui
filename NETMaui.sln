@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculadoraApp", "Calculado
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMCApp", "IMCApp\IMCApp.csproj", "{1C3E6897-F4C7-45BB-95F1-CE6969A9A85A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListaDeComprasApp", "ListaDeComprasApp\ListaDeComprasApp.csproj", "{C7117BE3-645A-4C13-AD7F-6A71955638B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{1C3E6897-F4C7-45BB-95F1-CE6969A9A85A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{1C3E6897-F4C7-45BB-95F1-CE6969A9A85A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C3E6897-F4C7-45BB-95F1-CE6969A9A85A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7117BE3-645A-4C13-AD7F-6A71955638B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7117BE3-645A-4C13-AD7F-6A71955638B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7117BE3-645A-4C13-AD7F-6A71955638B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7117BE3-645A-4C13-AD7F-6A71955638B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

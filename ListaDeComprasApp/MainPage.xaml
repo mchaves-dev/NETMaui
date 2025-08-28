@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ListaDeComprasApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Shell.NavBarIsVisible="False">
+
+    <ScrollView>
+        <FlexLayout
+            Padding="20,50,20,40"
+            AlignItems="Center"
+            Direction="Column"
+            JustifyContent="SpaceBetween">
+
+            <Label
+                SemanticProperties.HeadingLevel="Level1"
+                Style="{StaticResource HeadlinePrimary}"
+                Text="Lista de compras" />
+            <VerticalStackLayout>
+                <Frame />
+            </VerticalStackLayout>
+            <Button
+                x:Name="btnAdicionarProduto"
+                Clicked="btnAdicionarProduto_Clicked"
+                HorizontalOptions="Fill"
+                SemanticProperties.Description="Adicionar Produto"
+                Text="Adicionar Produto" />
+        </FlexLayout>
+    </ScrollView>
+
+</ContentPage>
