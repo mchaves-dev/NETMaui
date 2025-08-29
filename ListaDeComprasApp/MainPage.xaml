@@ -30,11 +30,11 @@
                 <CollectionView x:Name="clvProdutos">
                     <CollectionView.ItemTemplate>
                         <DataTemplate>
-                            <Border>
+                            <Frame>
                                 <Label Text="{Binding NomeProduto}" />
                                 <Label Text="{Binding Quantidade}" />
                                 <Label Text="{Binding Observacao}" />
-                            </Border>
+                            </Frame>
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
                 </CollectionView>
