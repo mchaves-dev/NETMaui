@@ -13,6 +13,12 @@ public partial class Home : ContentPage
         LoadCharactersAsync();
     }
 
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
+		LoadCharactersAsync();
+	}
+
     private async Task LoadCharactersAsync(int currentPage = 1)
     {
         try

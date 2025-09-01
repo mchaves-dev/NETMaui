@@ -9,7 +9,13 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new AppShell());
-        }
+            var window = new Window(new AppShell());
+            window.MinimumHeight = 750;
+            window.MinimumWidth = 400;
+			window.MaximumHeight = 750;
+			window.MaximumWidth = 400;
+			return window;
+
+		}
     }
 }
