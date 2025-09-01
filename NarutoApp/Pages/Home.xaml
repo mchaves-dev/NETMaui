@@ -4,7 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:model="clr-namespace:NarutoApp.Models"
-    Title="Home">
+    Title="Home"
+    Shell.NavBarIsVisible="False">
     <ContentPage.Background>
         <Color>#242424</Color>
     </ContentPage.Background>
@@ -12,13 +13,18 @@
         <VerticalStackLayout Padding="10" Spacing="10">
             <Label
                 FontAttributes="Bold"
-                HorizontalOptions="Start"
+                FontAutoScalingEnabled="True"
+                FontSize="Title"
+                HorizontalOptions="Center"
                 Text="Navegar pelos personagens"
-                VerticalOptions="Center" />
+                TextColor="White"
+                TextTransform="Uppercase" />
             <CollectionView
                 x:Name="clvCharacters"
                 x:DataType="model:Character"
-                ItemsLayout="VerticalGrid,2">
+                ItemsLayout="VerticalGrid,2"
+                RemainingItemsThreshold="2"
+                RemainingItemsThresholdReached="clvCharacters_RemainingItemsThresholdReached">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Border
@@ -38,7 +44,8 @@
                                 <Label
                                     FontAttributes="Bold"
                                     FontSize="16"
-                                    Text="{Binding name}" />
+                                    Text="{Binding name}"
+                                    TextColor="White" />
                                 <!--<Label
                                     FontSize="13"
                                     Text="Uzumaki Clan"
@@ -52,8 +59,8 @@
                                         FontAttributes="Bold"
                                         FontSize="12"
                                         HorizontalOptions="Center"
-                                        Text="Hokage" />-->
-                                </Border>
+                                        Text="Hokage" />
+                                </Border>-->
                             </VerticalStackLayout>
                         </Border>
                     </DataTemplate>
