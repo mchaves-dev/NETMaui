@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="HotelApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HotelApp"
+    xmlns:pages="clr-namespace:HotelApp.Pages"
+    Title="HotelApp">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+        Title="Contratar Hospedagem"
+        ContentTemplate="{DataTemplate pages:ContratarHospedagemPage}"
+        Route="ContratarHospedagemPage" />
+
+    <ShellContent
+        Title="Hospedagem Contratada"
+        ContentTemplate="{DataTemplate pages:ContratarHospedagemPage}"
+        Route="ContratarHospedagemPage" />
+</Shell>
