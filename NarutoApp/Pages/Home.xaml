@@ -9,63 +9,63 @@
     <ContentPage.Background>
         <Color>#242424</Color>
     </ContentPage.Background>
-    <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="10">
-            <Label
-                FontAttributes="Bold"
-                FontAutoScalingEnabled="True"
-                FontSize="Title"
-                HorizontalOptions="Center"
-                Text="Navegar pelos personagens"
-                TextColor="White"
-                TextTransform="Uppercase" />
-            <CollectionView
-                x:Name="clvCharacters"
-                x:DataType="model:Character"
-                ItemsLayout="VerticalGrid,2"
-                RemainingItemsThreshold="2"
-                RemainingItemsThresholdReached="clvCharacters_RemainingItemsThresholdReached">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
+    <Label
+        FontAttributes="Bold"
+        FontAutoScalingEnabled="True"
+        FontSize="Title"
+        HorizontalOptions="Center"
+        Text="Navegar pelos personagens"
+        TextColor="White"
+        TextTransform="Uppercase" />
+
+    <CollectionView
+        x:Name="clvCharacters"
+        x:DataType="model:Character"
+        ItemsLayout="VerticalGrid,2"
+        RemainingItemsThreshold="10"
+        RemainingItemsThresholdReached="clvCharacters_RemainingItemsThresholdReached">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Border
+                    Margin="5"
+                    Padding="16"
+                    x:DataType="model:Character"
+                    BackgroundColor="#2A2A2A"
+                    Stroke="Transparent"
+                    StrokeShape="18"
+                    VerticalOptions="Center">
+                    <VerticalStackLayout Spacing="12">
                         <Border
-                            Margin="5"
-                            Padding="16"
-                            x:DataType="model:Character"
-                            BackgroundColor="#2A2A2A"
-                            Stroke="Transparent"
+                            Background="#505050"
+                            HeightRequest="108"
                             StrokeShape="18">
-                            <VerticalStackLayout Spacing="12">
-                                <Border
-                                    Background="#505050"
-                                    HeightRequest="108"
-                                    StrokeShape="18">
-                                    <Image Aspect="Fill" Source="{Binding firsImage}" />
-                                </Border>
-                                <Label
-                                    FontAttributes="Bold"
-                                    FontSize="16"
-                                    Text="{Binding name}"
-                                    TextColor="White" />
-                                <!--<Label
-                                    FontSize="13"
-                                    Text="Uzumaki Clan"
-                                    TextColor="#505050" />
-                                <Border
-                                    Padding="6"
-                                    BackgroundColor="Green"
-                                    HorizontalOptions="Start"
-                                    StrokeShape="4">
-                                    <Label
-                                        FontAttributes="Bold"
-                                        FontSize="12"
-                                        HorizontalOptions="Center"
-                                        Text="Hokage" />
-                                </Border>-->
-                            </VerticalStackLayout>
+                            <Image Aspect="Fill" Source="{Binding firsImage}" />
                         </Border>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
-        </VerticalStackLayout>
-    </ScrollView>
+                        <Label
+                            FontAttributes="Bold"
+                            FontSize="16"
+                            Text="{Binding name}"
+                            TextColor="White" />
+                        <Label
+                            FontSize="13"
+                            Text="{Binding personal.clan}"
+                            TextColor="{StaticResource Gray100}" />
+                        <!--<Border
+                            Padding="6"
+                            BackgroundColor="Green"
+                            HorizontalOptions="Start"
+                            Stroke="Transparent"
+                            StrokeShape="4">
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="12"
+                                HorizontalOptions="Center"
+                                Text="{Binding personal.team}"
+                                TextColor="White" />
+                        </Border>-->
+                    </VerticalStackLayout>
+                </Border>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>
