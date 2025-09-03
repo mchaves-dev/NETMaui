@@ -9,7 +9,7 @@
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var window = new Window(new AppShell());
+            var window = new Window(new NavigationPage(new Pages.CharactersPage()));
             window.MinimumHeight = 750;
             window.MinimumWidth = 400;
 			window.MaximumHeight = 750;

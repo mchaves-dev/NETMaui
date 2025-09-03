@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="NarutoApp.Pages.CharactersPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:NarutoApp.Models"
+    xmlns:vm="clr-namespace:NarutoApp.ViewModels"
+    Title="CharactersPage"
+    x:DataType="vm:CharactersPageViewModel"
+    Shell.NavBarIsVisible="False">
+
+    <ContentPage.Background>
+        <Color>#242424</Color>
+    </ContentPage.Background>
+
+    <VerticalStackLayout>
+        <Label
+            FontAttributes="Bold"
+            FontAutoScalingEnabled="True"
+            FontSize="Title"
+            HorizontalOptions="Center"
+            Text="Navegar pelos personagens"
+            TextColor="White"
+            TextTransform="Uppercase" />
+
+        <CollectionView
+            x:Name="clvCharacters"
+            x:DataType="model:Character"
+            ItemsLayout="VerticalGrid,2"
+            ItemsSource="{Binding Characters}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border
+                        Margin="5"
+                        Padding="16"
+                        x:DataType="model:Character"
+                        BackgroundColor="#2A2A2A"
+                        Stroke="Transparent"
+                        StrokeShape="18"
+                        VerticalOptions="Center">
+                        <VerticalStackLayout Spacing="12">
+                            <Border
+                                Background="#505050"
+                                HeightRequest="108"
+                                StrokeShape="18">
+                                <Image Aspect="Fill" Source="{Binding firsImage}" />
+                            </Border>
+                            <Label
+                                FontAttributes="Bold"
+                                FontSize="16"
+                                Text="{Binding name}"
+                                TextColor="White" />
+                            <Label
+                                FontSize="13"
+                                Text="{Binding personal.clan}"
+                                TextColor="{StaticResource Gray100}" />
+                            <!--<Border
+                         Padding="6"
+                         BackgroundColor="Green"
+                         HorizontalOptions="Start"
+                         Stroke="Transparent"
+                         StrokeShape="4">
+                         <Label
+                             FontAttributes="Bold"
+                             FontSize="12"
+                             HorizontalOptions="Center"
+                             Text="{Binding personal.team}"
+                             TextColor="White" />
+                     </Border>-->
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>
