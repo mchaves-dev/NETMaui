@@ -16,6 +16,7 @@ public class CharactersPageViewModel : INotifyPropertyChanged
         _isBusy = false;
         _characterRepository = characterRepository;
         _characters = new();
+        LoadCharactersAsync();
     }
 
     public ObservableCollection<Character> Characters => _characters;
