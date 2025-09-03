@@ -2,6 +2,7 @@
 using NarutoApp.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows.Input;
 
 namespace NarutoApp.ViewModels;
 
@@ -16,31 +17,36 @@ public class CharactersPageViewModel : INotifyPropertyChanged
         _isBusy = false;
         _characterRepository = characterRepository;
         _characters = new();
-        LoadCharactersAsync();
+
+        RemainingItemsThresholdReachedCommand = new Command(async () => await LoadCharactersAsync());
+
+        _ = LoadCharactersAsync();
     }
+
+    public ICommand RemainingItemsThresholdReachedCommand { get; }
 
     public ObservableCollection<Character> Characters => _characters;
 
-    private async Task LoadCharactersAsync(int currentPage = 1)
+    private async Task LoadCharactersAsync()
     {
+        if (_isBusy) return;
+
         try
         {
             _isBusy = true;
 
+            var currentPage = ( _characters.Count / 20 ) + 1;
             var characters = await _characterRepository.LoadCharactersAsync(currentPage);
 
-            if (characters is IEnumerable<Character> == false)
-                return;
+            if (characters is IEnumerable<Character> == false) return;
 
             foreach (var character in characters)
                 _characters.Add(character);
-
-            OnPropertyChanged(nameof(_characters));
-            OnPropertyChanged(nameof(Characters));
         }
         catch (Exception ex)
         {
             await App.Current.MainPage.DisplayAlert("Ops!", $"Ops, Something went wrong {ex.Message}", "OK");
+            _isBusy = false;
         }
         finally
         {

@@ -26,7 +26,9 @@
         x:Name="clvCharacters"
         x:DataType="vm:CharactersPageViewModel"
         ItemsLayout="VerticalGrid,2"
-        ItemsSource="{Binding Characters}">
+        ItemsSource="{Binding Characters}"
+        RemainingItemsThreshold="5"
+        RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Border

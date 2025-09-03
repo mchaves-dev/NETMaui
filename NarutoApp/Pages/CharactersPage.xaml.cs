@@ -8,6 +8,5 @@ public partial class CharactersPage : ContentPage
 	{
 		InitializeComponent();
 		BindingContext = charactersPageViewModel;
-
     }
 }
