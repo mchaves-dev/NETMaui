@@ -13,22 +13,15 @@
         <Color>#242424</Color>
     </ContentPage.Background>
 
-    <Label
-        FontAttributes="Bold"
-        FontAutoScalingEnabled="True"
-        FontSize="Title"
-        HorizontalOptions="Center"
-        Text="Navegar pelos personagens"
-        TextColor="White"
-        TextTransform="Uppercase" />
-
     <CollectionView
         x:Name="clvCharacters"
         x:DataType="vm:CharactersPageViewModel"
+        ItemSizingStrategy="MeasureFirstItem"
         ItemsLayout="VerticalGrid,2"
         ItemsSource="{Binding Characters}"
+   
         RemainingItemsThreshold="5"
-        RemainingItemsThresholdReachedCommand="{Binding RemainingItemsThresholdReachedCommand}">
+        RemainingItemsThresholdReachedCommand="{Binding LoadCharactersCommand}">
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <Border
@@ -39,36 +32,37 @@
                     Stroke="Transparent"
                     StrokeShape="18"
                     VerticalOptions="Center">
-                    <VerticalStackLayout Spacing="12">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
                         <Border
+                            Grid.Row="0"
+                            Grid.Column="0"
                             Background="#505050"
                             HeightRequest="108"
                             StrokeShape="18">
-                            <Image Aspect="Fill" Source="{Binding firsImage}" />
+                            <Image Aspect="Fill" Source="{Binding FistImage}" />
                         </Border>
                         <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
                             FontAttributes="Bold"
                             FontSize="16"
                             Text="{Binding name}"
                             TextColor="White" />
                         <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
                             FontSize="13"
                             Text="{Binding personal.clan}"
                             TextColor="{StaticResource Gray100}" />
-                        <!--<Border
-                         Padding="6"
-                         BackgroundColor="Green"
-                         HorizontalOptions="Start"
-                         Stroke="Transparent"
-                         StrokeShape="4">
-                         <Label
-                             FontAttributes="Bold"
-                             FontSize="12"
-                             HorizontalOptions="Center"
-                             Text="{Binding personal.team}"
-                             TextColor="White" />
-                     </Border>-->
-                    </VerticalStackLayout>
+                    </Grid>
                 </Border>
             </DataTemplate>
         </CollectionView.ItemTemplate>
