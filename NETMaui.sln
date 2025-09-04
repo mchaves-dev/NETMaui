@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVVMApp", "MVVMApp\MVVMApp.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelApp", "HotelApp\HotelApp.csproj", "{18209782-DF6E-48D6-856A-03B5866630ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumoPessoalAguaApp", "ConsumoPessoalAguaApp\ConsumoPessoalAguaApp.csproj", "{30D8565B-FD24-45CB-936C-64E1B84DB159}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,8 +57,13 @@ Global
 		{54CBDA01-618A-42B6-9DF7-181C8DFC6DD5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{18209782-DF6E-48D6-856A-03B5866630ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{18209782-DF6E-48D6-856A-03B5866630ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18209782-DF6E-48D6-856A-03B5866630ED}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{18209782-DF6E-48D6-856A-03B5866630ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18209782-DF6E-48D6-856A-03B5866630ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D8565B-FD24-45CB-936C-64E1B84DB159}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D8565B-FD24-45CB-936C-64E1B84DB159}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D8565B-FD24-45CB-936C-64E1B84DB159}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D8565B-FD24-45CB-936C-64E1B84DB159}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
